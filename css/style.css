@@ -1,0 +1,180 @@
+body {
+    background-color: rgb(255, 241, 203);
+}
+
+#darkblock {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    transition: 0.1s ease;
+    visibility: hidden;
+}
+
+.darker {
+    visibility: visible!important;
+}
+
+.block {
+    width: 550px;
+    height: 500px;
+    background: white;
+    border-top: 4px solid #000;
+    border-bottom: 4px solid #000;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.block ul.choice {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.block ul.choice li {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.block ul.choice a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.5s ease;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.block ul.choice a:hover,
+.block ul.choice a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.block .blockemail {
+    left: 0;
+    top: 50px;
+}
+
+.block .blockmobile {
+    left: 100%;
+    top: 50px;
+}
+
+.block .blocks {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    transition: 0.1s ease-in-out;
+    padding: 0 25px;
+}
+
+.block .blocks h2 {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.block .blocks label {
+    font-size: 20px;
+}
+
+.block .blocks label.radio {
+    font-size: 12px;
+}
+
+.block #error {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(241, 0, 0);
+}
+
+.block #error ul {
+    list-style: none;
+}
+
+#success {
+    display: none;
+    position: fixed;
+    left: calc(50% - 60px);
+    top: calc(50% - 60px);
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+    transition: 1s ease;
+    -webkit-animation-name: load;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: load;
+    -moz-animation-duration: 300ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: load;
+    -ms-animation-duration: 300ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: load;
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.succesfully {
+    display: block!important;
+}
+
+@-ms-keyframes load {
+    from {
+        -ms-transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes load {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes load {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
