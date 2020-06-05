@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 241, 203);
+    background-color: #7902a8;
 }
 
 #darkblock {
@@ -16,20 +16,30 @@ body {
     visibility: hidden;
 }
 
+
+/* Making screen dark while loading */
+
 .darker {
     visibility: visible!important;
 }
 
+
+/* Main block */
+
 .block {
     width: 550px;
     height: 500px;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px #000;
     border-top: 4px solid #000;
     border-bottom: 4px solid #000;
     margin: auto;
     overflow: hidden;
     position: relative;
 }
+
+
+/* Changing forms buttons */
 
 .block ul.choice {
     list-style: none;
@@ -64,7 +74,12 @@ body {
 .block ul.choice a:hover,
 .block ul.choice a.active {
     background-color: #000;
-    color: #fff;
+    color: #E4CCEE;
+}
+
+.disablehover {
+    background-color: transparent!important;
+    color: #000!important;
 }
 
 .block .blockemail {
@@ -98,6 +113,85 @@ body {
     font-size: 12px;
 }
 
+
+/* Styling inputs */
+
+.block .blocks input,
+.block .blocks input:-webkit-autofill,
+.block .blocks input:-webkit-autofill:hover,
+.block .blocks input:-webkit-autofill:focus,
+.block .blocks textarea:-webkit-autofill,
+.block .blocks textarea:-webkit-autofill:hover,
+.block .blocks textarea:-webkit-autofill:focus,
+.block .blocks select:-webkit-autofill,
+.block .blocks select:-webkit-autofill:hover,
+.block .blocks select:-webkit-autofill:focus {
+    border: 1px solid rgb(0, 0, 0);
+    -webkit-text-fill-color: rgb(0, 0, 0);
+    padding: 12px;
+    font-weight: 800;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.block .blocks input[type='radio'] {
+    margin-bottom: 0;
+}
+
+.block .blocks input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #000;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #000;
+}
+
+.block .blocks input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #000;
+}
+
+
+/* Register buttons */
+
+.block .blocks #regMobile,
+.block .blocks #regEmail {
+    background: #fff;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.block .blocks #regMobile:hover,
+.block .blocks #regEmail:hover {
+    background-color: #000;
+    -webkit-text-fill-color: #fff;
+}
+
+
+/* Custom margin class */
+
+.block .blocks .mt-4 {
+    margin-top: 15px;
+}
+
+
+/* Errors div */
+
 .block #error {
     display: none;
     position: absolute;
@@ -111,6 +205,9 @@ body {
 .block #error ul {
     list-style: none;
 }
+
+
+/* loading animation div */
 
 #success {
     display: none;
@@ -142,6 +239,29 @@ body {
 .succesfully {
     display: block!important;
 }
+
+
+/* Login button */
+
+#login {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    margin: 0;
+    padding: 5px 10px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* Animation */
 
 @-ms-keyframes load {
     from {

@@ -1,77 +1,86 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
 
+    <!-- TITLE -->
     <title>Citrus Systems</title>
     <meta name="description" content="This is test project for Citrus System">
     <meta name="author" content="Luka Cosic">
 
+    <!-- CSS LOADING -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
-
+    <!-- MAIN BLOCK -->
     <div class="block">
         <ul class="choice">
+            <!-- FORMS CHANGING BUTTONS -->
             <li><a id="buttonEmail" href="#" onclick="emailFunction()" class="active">Email</a></li>
             <li><a id="buttonMobile" href="#" onclick="mobileFunction()">Mobile</a></li>
         </ul>
+        <!-- EMAIL REGISTRATION FORM -->
         <div class="blockemail blocks" id="blockemail">
             <form>
                 <h2>Register via email!</h2>
+                <!-- EMAIL -->
                 <label>Email: </label><br/>
-                <input type="text" id="emailEmail" name="email"><br/>
+                <input type="text" id="emailEmail" name="email" style="margin-bottom: 15px;"><br/>
+                <!-- CURRENCY -->
                 <label>Currency: </label><br/>
-                <input type="radio" name="currency" value="euro">
-                <label for="euro" class="radio">Euro</label><br>
+                <input type="radio" name="currency" value="euro" checked="checked">
+                <label for="euro" class="radio">&nbsp;Euro</label><br>
                 <input type="radio" name="currency" value="dollar">
-                <label for="dollar" class="radio">Dollar</label><br>
+                <label for="dollar" class="radio">&nbsp;Dollar</label><br>
                 <input type="radio" name="currency" value="dinar">
-                <label for="dinar" class="radio">Dinar</label><br/>
-
-
-                <input type="checkbox" name="checkterms" id="checkterms" value="Terms and conditions" />I have read and agree to the Terms<br/>
+                <label for="dinar" class="radio">&nbsp;Dinar</label><br/>
+                <!-- TERMS AND PROMOTIONS -->
+                <input class="mt-4" type="checkbox" name="checkterms" id="checkterms" value="Terms and conditions" />I have read and agree to the Terms<br/>
                 <input type="checkbox" name="check" value="promo" />I want to recieve promotions on my email.<br/>
-                <input type="button" value="Register" id="regEmail" onclick="emailRegFunction()" />
+                <!-- REGISTER BUTTON -->
+                <input class="mt-4" type="button" value="Register" id="regEmail" onclick="emailRegFunction()" />
             </form>
         </div>
+        <!-- MOBILE REGISTRATION FORM -->
         <div class="blockmobile blocks" id="blockmobile">
             <form>
                 <h2>Register via Mobile number!</h2>
+                <!-- MOBILE NUMBER -->
                 <label>Mobile: </label><br/>
-                <input type="text" id="mobile"><br/>
+                <input type="text" id="mobile" style="margin-bottom: 15px;"><br/>
+                <!-- CURRENCY -->
                 <label>Currency: </label><br/>
-                <input type="radio" name="currency" value="euro">
+                <input type="radio" name="currency" value="euro" checked="checked">
                 <label for="euro" class="radio">Euro</label><br>
                 <input type="radio" name="currency" value="dollar">
                 <label for="dollar" class="radio">Dollar</label><br>
                 <input type="radio" name="currency" value="dinar">
                 <label for="dinar" class="radio">Dinar</label><br/>
-
-
-                <input type="checkbox" name="checkterms" id="mcheckterms" value="Terms and conditions" />I have read and agree to the Terms<br/>
+                <!-- TERMS AND PROMOTIONS -->
+                <input class="mt-4" type="checkbox" name="checkterms" id="mcheckterms" value="Terms and conditions" />I have read and agree to the Terms<br/>
                 <input type="checkbox" name="check" value="promo" />I want to recieve promotions on my mobile.<br/>
-                <input type="button" value="Register" id="regMobile" onclick="mobileRegFunction()" />
+                <!-- REGISTER BUTTON -->
+                <input class="mt-4" type="button" value="Register" id="regMobile" onclick="mobileRegFunction()" />
             </form>
         </div>
-        <div id="error">
-
-        </div>
+        <!-- ERROR DIV SHOWING ERRORS OR SUCCESSFUL REGISTRATION -->
+        <div id="error"></div>
+        <!-- GO TO LOGIN PAGE BUTTON AFTER REGISTRATION -->
+        <a href="#" id="login">Go login page?</a>
+        <!-- LOADING ICON -->
         <div>
             <img src="loading.png" id="success">
         </div>
     </div>
+    <!-- MAIN DIV END -->
 
+    <!-- LOADING DARK SCREEN -->
+    <div id="darkblock"></div>
 
-    <div id="darkblock">
-
-    </div>
-
+    <!-- LOADING JAVASCRIPT -->
     <script src="js/javascript.js"></script>
 </body>
 
